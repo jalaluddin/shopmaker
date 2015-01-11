@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="db787f15-2dd4-4228-bf2c-58c9ee85edaa" name="Membership" linkedPackageId="e22f4cd0-1326-4632-bd3f-64df37f85b5c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="e687f5c3-bcf8-43ff-93bb-b0886c883b00">
+      <profileInstance Id="9e909e42-c625-4d71-a49d-a35b6b412ef3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1b1dcfdb-527d-4a36-93b1-dffc687190f5">
+      <profileInstance Id="93852da9-b74a-4fdf-8e0f-a25578f68d2f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="35a742c3-33b5-47fe-8ae9-e634c0acace1" name="Admin" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="abb7ef11-58d3-4a10-bd4c-f2849c16a2bb" />
+        <targetEnds>
+          <association Id="0a46f027-709d-4b2a-87e2-f2eebc5e9ea8" isDerived="false" sourceEndRoleName="Admin" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ffaf904c-686f-4902-bc9d-7e44f01a936b" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e1f07cba-6747-4e2f-b892-8e65e8a84980" name="Admin" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8a4f79f4-5168-4c07-be4b-dc4249ffc1bc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="65cd17ca-191f-4fbd-86a7-4b13f50b1ea9" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="398a3d28-209d-49da-9c2a-0aca7eb9466f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="915f4299-98d1-4a02-b527-cd4de5acc0c4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ffaf904c-686f-4902-bc9d-7e44f01a936b" name="Login" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2fde2261-6784-438e-87fd-3738e68905a0" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="53b22ad0-975e-4362-bb36-ee30686aea54" name="ShopOwner" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea99d60d-df7d-44b8-9a63-0a6541b4794d" />
+        <targetEnds>
+          <association Id="d29caea4-60e8-4566-b135-b07f709cfc8e" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Login" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ffaf904c-686f-4902-bc9d-7e44f01a936b" LastKnownName="Login" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5c427c6f-2254-4d2a-bf7f-05bb216f0b4c" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f17f8c59-f78c-44bc-9568-8f46240fac0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a209a388-96fa-43bb-a1f1-30aed1f5e781" name="Login" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="37dabbbc-1352-4a3d-b15e-cede9ddcdccb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e72dda68-92e1-4fe5-a3f5-37df86f9831b" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e22f4cd0-1326-4632-bd3f-64df37f85b5c" name="UML">
+    <elementDefinition Id="ac15c806-ca5a-4eee-8f5a-7009603ffe3e" />
+  </package>
+</useCaseModelRoot>

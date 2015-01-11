@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Membership">
+  <useCaseModelRootMoniker Id="db787f15-2dd4-4228-bf2c-58c9ee85edaa" />
+  <nestedChildShapes>
+    <actorShape Id="00d04cac-adda-4ac5-93ff-7725f9e1926f" absoluteBounds="2.5, 1.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="35a742c3-33b5-47fe-8ae9-e634c0acace1" LastKnownName="Admin" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="36fbc2c9-2a88-4dc9-a17c-7a6aabb5a4fa" absoluteBounds="4, 1.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="ffaf904c-686f-4902-bc9d-7e44f01a936b" LastKnownName="Login" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(3 : 1.625); (4 : 1.625)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="0a46f027-709d-4b2a-87e2-f2eebc5e9ea8" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="00d04cac-adda-4ac5-93ff-7725f9e1926f" />
+        <useCaseShapeMoniker Id="36fbc2c9-2a88-4dc9-a17c-7a6aabb5a4fa" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <actorShape Id="f1108645-b997-4100-ab12-2ead7e39aea8" absoluteBounds="2.5, 2.875, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="53b22ad0-975e-4362-bb36-ee30686aea54" LastKnownName="ShopOwner" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseAssociationConnector edgePoints="[(3 : 2.91071428571429); (4.24806448723796 : 1.84094472522461)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="d29caea4-60e8-4566-b135-b07f709cfc8e" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="f1108645-b997-4100-ab12-2ead7e39aea8" />
+        <useCaseShapeMoniker Id="36fbc2c9-2a88-4dc9-a17c-7a6aabb5a4fa" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

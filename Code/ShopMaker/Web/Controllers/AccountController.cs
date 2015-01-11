@@ -8,10 +8,10 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using Web.Filters;
-using Web.Models;
+using ShopMaker.Web.Filters;
+using ShopMaker.Web.Models;
 
-namespace Web.Controllers
+namespace ShopMaker.Web.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]

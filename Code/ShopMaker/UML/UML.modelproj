@@ -23,6 +23,13 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
+    <Content Include="Membership.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Membership.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Membership.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\UML.uml">
       <SubType>Content</SubType>
     </Content>
