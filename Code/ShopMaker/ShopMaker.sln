@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Membership", "Membership\Membership.csproj", "{A47F89EF-0381-43D7-9152-2F22177A613A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{FCD3557C-A394-4F51-87FD-CD7D23F099C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{A47F89EF-0381-43D7-9152-2F22177A613A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A47F89EF-0381-43D7-9152-2F22177A613A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A47F89EF-0381-43D7-9152-2F22177A613A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD3557C-A394-4F51-87FD-CD7D23F099C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD3557C-A394-4F51-87FD-CD7D23F099C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD3557C-A394-4F51-87FD-CD7D23F099C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD3557C-A394-4F51-87FD-CD7D23F099C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

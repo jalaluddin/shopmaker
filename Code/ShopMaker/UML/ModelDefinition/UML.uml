@@ -120,8 +120,54 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="d006b985-d642-4d9f-a087-e455630fcae7"
+            isDerived="false"
+            sourceEndRoleName="ShopOwner"
+            targetEndRoleName="Signup"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2967585c-f9b1-4828-ac91-85f50f46054c"
+              LastKnownName="Signup"
+              LastKnownLocation="UML.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="70bf1a38-b997-4e2e-a6e4-02d57ee06090"
+                  name="ShopOwner"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d93b9e1d-6d13-47df-a694-1849ef10d02d"
+                  name="Signup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2967585c-f9b1-4828-ac91-85f50f46054c"
+        name="Signup"
+        isAbstract="false"
+        isLeaf="false" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

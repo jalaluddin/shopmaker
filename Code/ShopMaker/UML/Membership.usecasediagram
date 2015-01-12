@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="db787f15-2dd4-4228-bf2c-58c9ee85edaa" name="Membership" linkedPackageId="e22f4cd0-1326-4632-bd3f-64df37f85b5c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="e687f5c3-bcf8-43ff-93bb-b0886c883b00">
-      <profileInstance Id="9e909e42-c625-4d71-a49d-a35b6b412ef3" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="1b1dcfdb-527d-4a36-93b1-dffc687190f5">
-      <profileInstance Id="93852da9-b74a-4fdf-8e0f-a25578f68d2f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="35a742c3-33b5-47fe-8ae9-e634c0acace1" name="Admin" isAbstract="false" isLeaf="false">
@@ -63,11 +49,46 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="e72dda68-92e1-4fe5-a3f5-37df86f9831b" />
           </association>
+          <association Id="7a1eddd2-02de-4367-af36-e529b951340c" isDerived="false" sourceEndRoleName="ShopOwner" targetEndRoleName="Signup" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="540f2183-8ba9-4240-b03d-fcceb760538a" LastKnownName="Signup" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="747a93f9-df32-4537-9770-7ac357026441" name="ShopOwner" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="70bf1a38-b997-4e2e-a6e4-02d57ee06090" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2ae8f9ae-28d7-4c77-a03e-521b3054c951" name="Signup" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d93b9e1d-6d13-47df-a694-1849ef10d02d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d006b985-d642-4d9f-a087-e455630fcae7" />
+          </association>
         </targetEnds>
       </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="540f2183-8ba9-4240-b03d-fcceb760538a" name="Signup" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2967585c-f9b1-4828-ac91-85f50f46054c" />
+      </useCase>
     </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="e22f4cd0-1326-4632-bd3f-64df37f85b5c" name="UML">
     <elementDefinition Id="ac15c806-ca5a-4eee-8f5a-7009603ffe3e" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e687f5c3-bcf8-43ff-93bb-b0886c883b00">
+        <profileInstance Id="9e909e42-c625-4d71-a49d-a35b6b412ef3" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="1b1dcfdb-527d-4a36-93b1-dffc687190f5">
+        <profileInstance Id="93852da9-b74a-4fdf-8e0f-a25578f68d2f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
