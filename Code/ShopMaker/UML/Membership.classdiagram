@@ -3440,6 +3440,17 @@
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a4978884-b14e-4a08-a44f-ed68a788db67" name="Address" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="2824318c-6053-442c-8e1d-4848057a2dd0" />
+              <suppliersInternal>
+                <interfaceRealization Id="57a429ea-4d55-465d-8427-7ba97bf00a3b">
+                  <interfaceMoniker Id="0f6905f8-19a0-45cf-b139-e400b14f230b" LastKnownName="IAddress" />
+                  <elementDefinition Id="730a1927-819d-4dcc-afbd-987b00f34629" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>

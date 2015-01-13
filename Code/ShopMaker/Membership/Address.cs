@@ -1,14 +1,15 @@
-﻿using ShopMaker.Web;
+﻿using ShopMaker.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ShopMaker.Membership
 {
-	public class AuthenticationToken : IAuthenticationToken
-	{
-        public string EmailAddress
+    public class Address : IEntity, IAddress
+    {
+        public Guid ID
         {
             get
             {
@@ -20,7 +21,7 @@ namespace ShopMaker.Membership
             }
         }
 
-        public string FirstName
+        public string AddressLine1
         {
             get
             {
@@ -32,7 +33,7 @@ namespace ShopMaker.Membership
             }
         }
 
-        public string LastName
+        public string AddressLine2
         {
             get
             {
@@ -44,7 +45,43 @@ namespace ShopMaker.Membership
             }
         }
 
-        public UserTypeOptions UserType
+        public string City
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Country
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string StateOrProvince
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public string Zipcode
         {
             get
             {
@@ -57,4 +94,3 @@ namespace ShopMaker.Membership
         }
     }
 }
-

@@ -4569,5 +4569,23 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2824318c-6053-442c-8e1d-4848057a2dd0"
+        name="Address"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="730a1927-819d-4dcc-afbd-987b00f34629">
+            <interfaceMoniker
+              Id="5fa00a82-3299-4a3e-a50b-cbf092432a84"
+              LastKnownName="IAddress"
+              LastKnownLocation="Package_1549.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -1,10 +1,10 @@
-﻿namespace ShopMaker.Membership
-{
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
+namespace ShopMaker.Membership
+{
 	public class AdminRepository : IMembershipRepository
 	{
 		public virtual void Add(IUserAccount user)

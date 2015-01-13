@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountStatusOptions.cs" />
+    <Compile Include="Address.cs" />
     <Compile Include="Admin.cs" />
     <Compile Include="AdminRepository.cs" />
     <Compile Include="AuthenticationToken.cs" />
@@ -48,6 +49,7 @@
     <Compile Include="IMembershipRepository.cs" />
     <Compile Include="IMembershipRepositoryFactory.cs" />
     <Compile Include="IUserAccount.cs" />
+    <Compile Include="MembershipRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShopOwner.cs" />
     <Compile Include="ShopOwnerRegistrationService.cs" />
@@ -55,6 +57,10 @@
     <Compile Include="UserAuthenticationService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{fcd3557c-a394-4f51-87fd-cd7d23f099c7}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Web\Web.csproj">
       <Project>{9754d4de-199c-44a6-9780-c45f39874e55}</Project>
       <Name>Web</Name>

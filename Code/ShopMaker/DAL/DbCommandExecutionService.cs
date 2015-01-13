@@ -314,12 +314,7 @@ namespace ShopMaker.DAL
                             {
                                 IEntity complexField = (IEntity)strongTypeValue;
                                 if (value != null)
-                                {
                                     complexField.ID = (Guid)value;
-                                    // if the property was null then it was not intended to pull the entire 
-                                    // object for this property, rather we should only fetch ID
-                                    complexField.SetIgnored(true);
-                                }
                                 else
                                     complexField = null;
 

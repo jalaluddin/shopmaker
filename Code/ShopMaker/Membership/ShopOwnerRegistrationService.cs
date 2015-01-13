@@ -1,11 +1,11 @@
-﻿namespace ShopMaker.Membership
-{
-	using ShopMaker.Web;
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+﻿using ShopMaker.Web;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
+namespace ShopMaker.Membership
+{
 	public class ShopOwnerRegistrationService : IShopOwnerRegistrationService
 	{
 		public virtual void Signup(string emailAddress, string password)

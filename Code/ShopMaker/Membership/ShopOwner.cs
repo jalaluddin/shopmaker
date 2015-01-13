@@ -1,11 +1,12 @@
-﻿namespace ShopMaker.Membership
-{
-	using System;
-	using System.Collections.Generic;
-	using System.Linq;
-	using System.Text;
+﻿using ShopMaker.DAL;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-	public class ShopOwner : IUserAccount
+namespace ShopMaker.Membership
+{
+	public class ShopOwner : IEntity, IUserAccount
 	{
 		public virtual IAddress BillingAddress
 		{
@@ -150,6 +151,18 @@
         }
 
         public AccountStatusOptions AccountStatus
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public Guid ID
         {
             get
             {
