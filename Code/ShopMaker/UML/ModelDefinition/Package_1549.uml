@@ -756,7 +756,7 @@
           </property>
           <property
             Id="98f62500-0e31-4ee8-9269-f96edfa8f0cc"
-            name="RegistrationDateTime"
+            name="AccountCreationDateTime"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1684,45 +1684,6 @@
           </interfaceRealization>
         </suppliersInternal>
         <targetEnds>
-          <association
-            Id="7d895a61-12c9-46ff-98a6-f2d8b71dd884"
-            isDerived="false"
-            sourceEndRoleName="ShopOwner"
-            targetEndRoleName="PermanentAddress"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="5fa00a82-3299-4a3e-a50b-cbf092432a84"
-              LastKnownName="IAddress"
-              LastKnownLocation="Package_1549.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="65ff078a-6854-4288-ae34-07eff91a3c85"
-                  name="ShopOwner"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a88852ee-b03b-46ef-8382-8b30bf349dc0"
-                  name="PermanentAddress"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
           <association
             Id="2c228d73-25a8-4fcc-9b98-d9a9237b056b"
             isDerived="false"

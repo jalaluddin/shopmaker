@@ -7,12 +7,6 @@
 
 	public class ShopOwner : IUserAccount
 	{
-		public virtual IAddress PermanentAddress
-		{
-			get;
-			set;
-		}
-
 		public virtual IAddress BillingAddress
 		{
 			get;
@@ -143,7 +137,7 @@
             }
         }
 
-        public DateTime RegistrationDateTime
+        public DateTime AccountCreationDateTime
         {
             get
             {

@@ -120,7 +120,7 @@
             }
         }
 
-        public DateTime RegistrationDateTime
+        public DateTime AccountCreationDateTime
         {
             get
             {

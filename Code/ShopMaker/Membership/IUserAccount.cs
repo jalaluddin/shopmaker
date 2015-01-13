@@ -25,7 +25,7 @@
 
 		string IPAddress { get;set; }
 
-		DateTime RegistrationDateTime { get;set; }
+        DateTime AccountCreationDateTime { get; set; }
 
 		AccountStatusOptions AccountStatus { get;set; }
 

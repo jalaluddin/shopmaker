@@ -625,7 +625,7 @@
                     <referencedTypeMoniker Id="3bd8d8f0-a5b5-4e85-a1ba-6dc511d62911" LastKnownName="string" />
                   </type_NamedElement>
                 </property>
-                <property Id="6e6e938e-4578-422e-afb3-230d9f53b3a5" name="RegistrationDateTime" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="6e6e938e-4578-422e-afb3-230d9f53b3a5" name="AccountCreationDateTime" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <appliedStereotypesInternal>
                     <stereotypeInstance Id="64fc129a-9717-4402-9283-bc175c81f1f8" name="property" profile="CSharpProfile">
                       <elementDefinition Id="5e81c02d-d3d2-4b4f-b32e-29cce20ce22e" />
@@ -1322,22 +1322,6 @@
                 </interfaceRealization>
               </suppliersInternal>
               <targetEnds>
-                <association Id="be32a9ad-161d-44a1-942f-c880fee52eee" isDerived="false" sourceEndRoleName="ShopOwner" targetEndRoleName="PermanentAddress" isLeaf="false" isAbstract="false">
-                  <interfaceMoniker Id="0f6905f8-19a0-45cf-b139-e400b14f230b" LastKnownName="IAddress" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="16e30121-e8ed-42ea-a182-658794f963b9" name="ShopOwner" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="65ff078a-6854-4288-ae34-07eff91a3c85" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="657f670f-5bfc-4635-84a3-36635a65621b" name="PermanentAddress" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="a88852ee-b03b-46ef-8382-8b30bf349dc0" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="7d895a61-12c9-46ff-98a6-f2d8b71dd884" />
-                </association>
                 <association Id="98b47f25-40b3-4778-945f-beb114e58892" isDerived="false" sourceEndRoleName="ShopOwner" targetEndRoleName="BillingAddress" isLeaf="false" isAbstract="false">
                   <interfaceMoniker Id="0f6905f8-19a0-45cf-b139-e400b14f230b" LastKnownName="IAddress" />
                   <relationshipOwnedElementsInternal>
