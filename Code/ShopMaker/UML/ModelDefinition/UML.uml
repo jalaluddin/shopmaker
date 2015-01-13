@@ -1,8 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ac15c806-ca5a-4eee-8f5a-7009603ffe3e"
   name="UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <appliedStereotypesInternal>
+    <stereotypeInstance
+      Id="eef1fe2e-b95c-452d-b398-1fea8dc79281"
+      name="namespace"
+      profile="CSharpProfile">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="b4e33cb0-4eae-44d0-8c54-3fd9a8cc34c0">
+          <propertyInstance
+            Id="2cc814e9-3865-46f1-86d8-29eb5f37808b"
+            name="BaseName" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c4fea353-9a2c-478e-90dc-f39093d28953">
+          <propertyInstance
+            Id="a8ec7b46-f01d-4142-ab13-e4d7f61fc0e1"
+            name="ClrAttributes" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="e4e19cc0-c73b-46b5-956d-971fd95f6eb1">
+          <propertyInstance
+            Id="f590de28-dfd7-45c1-97ab-96dc3b127be9"
+            name="Usings" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+    <stereotypeInstance
+      Id="48a79dd7-26bf-4d3d-8f33-1eae9d4a9696"
+      name="TextTemplateBindings"
+      profile="TextTemplateBindings">
+      <propertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="fbfdd04d-cba8-48a4-89e5-3013e49c940a">
+          <propertyInstance
+            Id="4761b69d-84e7-4e1e-b57e-e2bd18869af8"
+            name="Alias"
+            value="ClassTemplate|EnumTemplate|InterfaceTemplate|StructTemplate" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="fc561827-0fc4-49f0-85ff-4ddaad6fb438">
+          <propertyInstance
+            Id="8600096c-864c-4ca5-87f1-bc22f38b995f"
+            name="TemplateFilePath"
+            value="ClassTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4|EnumTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4|InterfaceTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4|StructTemplate=D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="9e69cce6-7278-4816-ab5c-afec068884d6">
+          <propertyInstance
+            Id="c14369fc-f006-42b3-942f-d7d9c7dd226c"
+            name="ProjectPath"
+            value="ClassTemplate=..\UMLLib\UMLLib.csproj|EnumTemplate=..\UMLLib\UMLLib.csproj|InterfaceTemplate=..\UMLLib\UMLLib.csproj|StructTemplate=..\UMLLib\UMLLib.csproj" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8850adf3-b76e-4ac3-8d18-dc8aa9d84846">
+          <propertyInstance
+            Id="abddf73a-cf75-4c3e-9542-caf9c5bb49fd"
+            name="TargetDirectory"
+            value="ClassTemplate=GeneratedCode\{PackageStructure}|EnumTemplate=GeneratedCode\{PackageStructure}|InterfaceTemplate=GeneratedCode\{PackageStructure}|StructTemplate=GeneratedCode\{PackageStructure}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="725d2149-9d60-41db-864b-90806bb55225">
+          <propertyInstance
+            Id="716322e2-ab4e-4dc1-a0fe-62a14dc5f027"
+            name="TargetName"
+            value="ClassTemplate={Name}|EnumTemplate={Name}|InterfaceTemplate={Name}|StructTemplate={Name}" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="c2ba95d2-cc87-4436-8868-354a3573d232">
+          <propertyInstance
+            Id="d61e81cd-b959-4e0f-a242-6ac7306f9cfa"
+            name="Overwrite"
+            value="ClassTemplate=True|EnumTemplate=True|InterfaceTemplate=True|StructTemplate=True" />
+        </stereotypeInstanceHasPropertyInstances>
+        <stereotypeInstanceHasPropertyInstances
+          Id="8c15d71c-0715-44da-964e-bbefe16aff9b">
+          <propertyInstance
+            Id="86abc63f-fabd-4515-888b-816b009b83be"
+            name="Parameters" />
+        </stereotypeInstanceHasPropertyInstances>
+      </propertyInstances>
+    </stereotypeInstance>
+  </appliedStereotypesInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -15,6 +97,18 @@
       <profileInstance
         Id="532ea607-fb19-44b8-8502-3351b05452be"
         name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="6d5c6226-6c33-461e-920e-753b7045a8bf">
+      <profileInstance
+        Id="8ba97158-a797-4b06-a0e7-889ad2528470"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="fdde4f1b-24fb-4b38-ad27-41fa22656076">
+      <profileInstance
+        Id="7cedeb87-d99f-4c22-966f-0f945baf333d"
+        name="TextTemplateBindings" />
     </packageHasProfileInstances>
   </profileInstances>
   <packagedElements>
@@ -168,6 +262,69 @@
         name="Signup"
         isAbstract="false"
         isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="61695320-1fb7-447f-934f-aad2fd783497"
+        name="Signup with free membership"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0f72ae76-9d9a-432e-9a84-560c39850102">
+            <useCaseMoniker
+              Id="2967585c-f9b1-4828-ac91-85f50f46054c"
+              LastKnownName="Signup"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fdc27387-2b0c-4f72-b7a5-c19f21217601"
+        name="Signup with starter membership"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="e3139688-ff6a-4022-a3f4-164a561e6743">
+            <useCaseMoniker
+              Id="2967585c-f9b1-4828-ac91-85f50f46054c"
+              LastKnownName="Signup"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="604a8053-12c6-4901-a5c2-2bc5b174cd0f"
+        name="Signup with premium membership"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="13aef520-69f0-4a37-9467-8a3fd684f8ab">
+            <useCaseMoniker
+              Id="2967585c-f9b1-4828-ac91-85f50f46054c"
+              LastKnownName="Signup"
+              LastKnownLocation="UML.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="f3ca6915-e26a-42d9-967c-05d3a4946fdc"
+        LastKnownName="ShopMaker.Membership"
+        LastKnownLocation="Package_1549.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a8c1ddae-7911-403c-b87a-845d68508c93"
+        LastKnownName="ShopMaker.Web"
+        LastKnownLocation="Package_1216.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

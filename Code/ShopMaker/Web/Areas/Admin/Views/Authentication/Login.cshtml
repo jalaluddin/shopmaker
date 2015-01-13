@@ -1,0 +1,20 @@
+﻿@model ShopMaker.Web.Areas.Admin.Models.AdminLoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Authentication", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.LabelFor(x => x.EmailAddress)
+    @Html.TextBoxFor(x => x.EmailAddress)
+    <br />
+    @Html.LabelFor(x => x.Password)
+    @Html.PasswordFor(x => x.Password)
+    <br />
+    @Html.LabelFor(x => x.Remember)
+    @Html.CheckBoxFor(x => x.Remember)
+    <br />
+    <input type="submit" value="Login" />
+}

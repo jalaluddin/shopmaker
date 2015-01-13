@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///D:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 11.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="ProjectPath = ..\UMLLib\UMLLib.csproj" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Medium" Text="UML's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'UML::ShopMaker.Membership::Admin' -  (Class), 'UML::ShopMaker.Membership::ShopOwner' -  (Class), 'UML::ShopMaker.Membership::UserAuthenticationService' -  (Class), 'UML::ShopMaker.Membership::AdminRepository' -  (Class), 'UML::ShopMaker.Membership::ShopOwnerRepository' -  (Class), 'UML::ShopMaker.Membership::ShopOwnerRegistrationService' -  (Class), 'UML::ShopMaker.Membership::AuthenticationToken' -  (Class) " />
+  <Message Timestamp="2015-01-13T14:20:39" Importance="Medium" Text="'UML::ShopMaker.Membership::Admin' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\Admin.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::ShopOwner' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\ShopOwner.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::UserAuthenticationService' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\UserAuthenticationService.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::AdminRepository' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\AdminRepository.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::ShopOwnerRepository' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\ShopOwnerRepository.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::ShopOwnerRegistrationService' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\ShopOwnerRegistrationService.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::AuthenticationToken' -  (Class) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\AuthenticationToken.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="Name = EnumTemplate" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="ProjectPath = ..\UMLLib\UMLLib.csproj" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\EnumTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="UML's Text Template Binding: 'EnumTemplate' will apply EnumTemplate.t4 to: 'UML::ShopMaker.Membership::AccountStatusOptions' -  (Enumeration), 'UML::ShopMaker.Web::UserTypeOptions' -  (Enumeration) " />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::AccountStatusOptions' -  (Enumeration) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\AccountStatusOptions.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Web::UserTypeOptions' -  (Enumeration) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Web\UserTypeOptions.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="Name = InterfaceTemplate" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="ProjectPath = ..\UMLLib\UMLLib.csproj" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\InterfaceTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="UML's Text Template Binding: 'InterfaceTemplate' will apply InterfaceTemplate.t4 to: 'UML::ShopMaker.Membership::IUserAccount' -  (Interface), 'UML::ShopMaker.Membership::IAddress' -  (Interface), 'UML::ShopMaker.Membership::IMembershipPackage' -  (Interface), 'UML::ShopMaker.Membership::IMembershipRepositoryFactory' -  (Interface), 'UML::ShopMaker.Membership::IMembershipRepository' -  (Interface), 'UML::ShopMaker.Web::IAuthenticator' -  (Interface), 'UML::ShopMaker.Web::IAuthenticationToken' -  (Interface), 'UML::ShopMaker.Web::IShopOwnerRegistrationService' -  (Interface) " />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::IUserAccount' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\IUserAccount.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::IAddress' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\IAddress.cs" />
+  <Message Timestamp="2015-01-13T14:20:40" Importance="Medium" Text="'UML::ShopMaker.Membership::IMembershipPackage' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\IMembershipPackage.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="'UML::ShopMaker.Membership::IMembershipRepositoryFactory' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\IMembershipRepositoryFactory.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="'UML::ShopMaker.Membership::IMembershipRepository' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Membership\IMembershipRepository.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="'UML::ShopMaker.Web::IAuthenticator' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Web\IAuthenticator.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="'UML::ShopMaker.Web::IAuthenticationToken' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Web\IAuthenticationToken.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="'UML::ShopMaker.Web::IShopOwnerRegistrationService' -  (Interface) : success (file created) - E:\Projects\AspNet\ShopMaker\Code\ShopMaker\UMLLib\GeneratedCode\ShopMaker.Web\IShopOwnerRegistrationService.cs" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="ProjectPath = ..\UMLLib\UMLLib.csproj" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="TemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="ResolvedTemplateFilePath = D:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 11.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Medium" Text="UML's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'UML::ShopMaker.Membership::Admin' -  (Class), 'UML::ShopMaker.Membership::ShopOwner' -  (Class), 'UML::ShopMaker.Membership::UserAuthenticationService' -  (Class), 'UML::ShopMaker.Membership::AdminRepository' -  (Class), 'UML::ShopMaker.Membership::ShopOwnerRepository' -  (Class), 'UML::ShopMaker.Membership::ShopOwnerRegistrationService' -  (Class), 'UML::ShopMaker.Membership::AuthenticationToken' -  (Class) " />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::Admin' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::ShopOwner' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::UserAuthenticationService' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::AdminRepository' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::ShopOwnerRepository' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::ShopOwnerRegistrationService' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::AuthenticationToken' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="The selection included 20 elements which were not bound to a template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Association): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Association): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Association): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Association): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership' -  (Package): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Membership::' -  (InterfaceRealization): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Web::' -  (Dependency): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Web' -  (Package): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="Diagnostic" Text="'UML::ShopMaker.Web::' -  (Association): no bound template." />
+  <Message Timestamp="2015-01-13T14:20:41" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

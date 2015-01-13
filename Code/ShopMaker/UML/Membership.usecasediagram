@@ -73,6 +73,39 @@
         <elementDefinition Id="2967585c-f9b1-4828-ac91-85f50f46054c" />
       </useCase>
     </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d3025d58-b5fe-44d4-aea3-b8aca3d2d8a6" name="Signup with free membership" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="61695320-1fb7-447f-934f-aad2fd783497" />
+        <extendedCases>
+          <extend Id="72594c50-c9bd-4f52-98b1-e6e0fbc6134b">
+            <useCaseMoniker Id="540f2183-8ba9-4240-b03d-fcceb760538a" LastKnownName="Signup" />
+            <elementDefinition Id="0f72ae76-9d9a-432e-9a84-560c39850102" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d2de6b69-48d9-4013-b410-0bd287181aaa" name="Signup with starter membership" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fdc27387-2b0c-4f72-b7a5-c19f21217601" />
+        <extendedCases>
+          <extend Id="4b93997e-1d62-41e7-b349-f836e0296fd9">
+            <useCaseMoniker Id="540f2183-8ba9-4240-b03d-fcceb760538a" LastKnownName="Signup" />
+            <elementDefinition Id="e3139688-ff6a-4022-a3f4-164a561e6743" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="97133c58-e993-4ca6-b842-4365eb7b66e7" name="Signup with premium membership" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="604a8053-12c6-4901-a5c2-2bc5b174cd0f" />
+        <extendedCases>
+          <extend Id="8d732330-d49b-496c-ac5d-a9c94fff2e35">
+            <useCaseMoniker Id="540f2183-8ba9-4240-b03d-fcceb760538a" LastKnownName="Signup" />
+            <elementDefinition Id="13aef520-69f0-4a37-9467-8a3fd684f8ab" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
   </packagedElements>
   <package Id="e22f4cd0-1326-4632-bd3f-64df37f85b5c" name="UML">
     <elementDefinition Id="ac15c806-ca5a-4eee-8f5a-7009603ffe3e" />
