@@ -20,7 +20,7 @@ namespace ShopMaker.Membership.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void AuthenticateAdmin_EmptyEmailAddress_ThrowsException()
         {
             // prepare
@@ -33,7 +33,7 @@ namespace ShopMaker.Membership.Tests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void AuthenticateAdmin_EmptyPassword_ThrowsException()
         {
             // prepare
@@ -117,6 +117,28 @@ namespace ShopMaker.Membership.Tests
             Assert.AreEqual(validFirstName, token.FirstName);
             Assert.AreEqual(validLastName, token.LastName);
             Assert.AreEqual(UserTypeOptions.Admin, token.UserType);
+        }
+
+        [TestMethod]
+        public void AuthenticateAdmin_AdminNotFoundInRepository_ReturnsNull()
+        {
+            // prepare
+            string nonExistingUserEmail = "abc@zyz.com";
+            string validPassword = "123456";
+            Admin admin = null;
+
+            var adminRepositoryMock = _kernel.GetMock<IMembershipRepository>();
+            adminRepositoryMock.Setup(x => x.Get(nonExistingUserEmail)).Returns(admin);
+
+            var repositoryFactoryMock = _kernel.GetMock<IMembershipRepositoryFactory>();
+            repositoryFactoryMock.Setup(x => x.CreateMembershipRepository(UserTypeOptions.Admin)).Returns(adminRepositoryMock.Object);
+            IAuthenticator authenticator = _kernel.Get<IAuthenticator>();
+
+            // act
+            IAuthenticationToken token = authenticator.AuthenticateAdmin(nonExistingUserEmail, validPassword);
+
+            // assert
+            Assert.IsNull(token);
         }
     }
 }

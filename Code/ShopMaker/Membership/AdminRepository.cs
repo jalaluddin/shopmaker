@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopMaker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,16 @@ namespace ShopMaker.Membership
 {
 	public class AdminRepository : IMembershipRepository
 	{
+        private IDbCommandExecutionService _dbCommandExecutionService;
+        private IDbCommandFactory _dbCommandFactory;
+
+        public AdminRepository(IDbCommandExecutionService dbCommandExecutionService,
+            IDbCommandFactory dbCommandFactory)
+        {
+            _dbCommandExecutionService = dbCommandExecutionService;
+            _dbCommandFactory = dbCommandFactory;
+        }
+
 		public virtual void Add(IUserAccount user)
 		{
 			throw new System.NotImplementedException();
