@@ -9,7 +9,7 @@ namespace ShopMaker.Web
 	{
 		IAuthenticationToken AuthenticateAdmin(string emailAddress, string password);
 
-		IAuthenticationToken AuthenticateShowOwner(string emailAddress, string password);
+        IAuthenticationToken AuthenticateShopOwner(string emailAddress, string password);
 
 	}
 }

@@ -20,7 +20,7 @@ namespace ShopMaker.Membership
 			throw new System.NotImplementedException();
 		}
 
-		public virtual IAuthenticationToken AuthenticateShowOwner(string emailAddress, string password)
+		public virtual IAuthenticationToken AuthenticateShopOwner(string emailAddress, string password)
 		{
 			throw new System.NotImplementedException();
 		}
