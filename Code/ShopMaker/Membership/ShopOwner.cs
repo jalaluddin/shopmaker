@@ -6,30 +6,8 @@ using System.Text;
 
 namespace ShopMaker.Membership
 {
-	public class ShopOwner : IEntity, IUserAccount
+	public class ShopOwner : IEntity, IShopOwner
 	{
-		public virtual IAddress BillingAddress
-		{
-			get;
-			set;
-		}
-
-		public virtual IMembershipPackage MembershipPlan
-		{
-			get;
-			set;
-		}
-
-		public virtual bool MatchPassword(string plainPassword)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public virtual void ChangeMembershipPlan(IMembershipPackage newPlan)
-		{
-			throw new System.NotImplementedException();
-		}
-
         public string EmailAddress
         {
             get
@@ -172,6 +150,35 @@ namespace ShopMaker.Membership
             {
                 throw new NotImplementedException();
             }
+        }
+
+        public IAddress BillingAddress
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public IMembershipPackage MembershipPlan
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public bool MatchPassword(string plainPassword)
+        {
+            throw new NotImplementedException();
         }
     }
 }
