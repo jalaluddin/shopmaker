@@ -31,7 +31,6 @@ namespace ShopMaker.Membership
 		AccountStatusOptions AccountStatus { get;set; }
 
 		bool MatchPassword(string plainPassword);
-
 	}
 }
 
