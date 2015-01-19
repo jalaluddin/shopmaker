@@ -18,12 +18,37 @@ namespace ShopMaker.Membership
 
 		public virtual void Signup(string emailAddress, string password)
 		{
-            throw new System.NotImplementedException();
+
+            int sz = emailAddress.Length;
+            if (String.IsNullOrEmpty(emailAddress))
+            {
+                throw new ArgumentNullException("Email address is empty.");
+            }
+
+            else if (String.IsNullOrEmpty(password))
+            {
+                
+                throw new ArgumentNullException("Password is empty.");
+            }
+
+            else if ((password.Length) < 6)
+            {
+                
+                throw new ArgumentException("Password is small.");
+            }
+             else if (emailAddress[sz - 1] != 'm' && emailAddress[sz - 2] != 'o' && emailAddress[sz - 3] != 'c' && emailAddress[sz - 4] != '.')
+             {
+                 
+                 throw new ArgumentException("Invalid email address.");
+             }
+
+            else Console.WriteLine("Login Succcessful");
+            
 		}
 
 		public virtual void VerifySignupEmailAddress(string emailAddress, string verificationCode)
 		{
-			throw new System.NotImplementedException();
+			
 		}
 
 		public virtual bool IsEmailAddressAlreadyUsed(string emailAddress)
