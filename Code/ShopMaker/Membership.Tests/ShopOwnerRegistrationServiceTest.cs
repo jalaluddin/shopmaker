@@ -117,5 +117,75 @@ namespace ShopMaker.Membership.Tests
             // assert
             repositoryMock.VerifyAll();
         }
+
+
+
+        // new unit test for method verify sigup Email Address 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void VerifySignupEmailAddress_EmptyVerificationCode_ThrowsException_()
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string invalidVerificationCode = string.Empty;
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, invalidVerificationCode);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void VerifySignupEmailAddress_NullVerificationCode_ThrowsException_()
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string invalidVerificationCode = null;
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, invalidVerificationCode);
+        }
+
+
+        [TestMethod]
+        public void VerifySignupEmailAddress_ValidVerificationCode_()
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string validVerificationCode = "123";
+
+            var repositoryMock = _kernel.GetMock<IMembershipRepository>();
+            repositoryMock.Setup(x => x.Add(It.Is<ShopOwner>(y => y.EmailAddress == validEmail
+                && y.VerificationCode == validVerificationCode))).Verifiable();
+
+            _kernel.GetMock<IMembershipRepositoryFactory>().Setup(x => x.CreateMembershipRepository(UserTypeOptions.ShopOwner))
+                .Returns(repositoryMock.Object);
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, validVerificationCode);
+
+            // assert
+            repositoryMock.VerifyAll();
+        }
+
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void IsEmailAddressAlreadyUsed_ThrowsException_()
+        {
+            //prepare
+            string usedEmail = "email@hello.com";
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.IsEmailAddressAlreadyUsed(usedEmail);
+        }
     }
 }
