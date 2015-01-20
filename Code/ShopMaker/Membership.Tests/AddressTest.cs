@@ -48,7 +48,7 @@ namespace ShopMaker.Membership.Tests
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.StateOrPrvince = invalidStateOrPrvince;
+            address.StateOrProvince = invalidStateOrPrvince;
         }
 
 
@@ -61,7 +61,7 @@ namespace ShopMaker.Membership.Tests
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.StateOrPrvince = invalidStateOrPrvince;
+            address.StateOrProvince = invalidStateOrPrvince;
         }
 
 
@@ -210,7 +210,7 @@ namespace ShopMaker.Membership.Tests
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.StateOrPrvince = invalidStateOrPrvince;
+            address.StateOrProvince = invalidStateOrPrvince;
         }
 
 
@@ -223,7 +223,7 @@ namespace ShopMaker.Membership.Tests
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.StateOrPrvince = invalidStateOrPrvince;
+            address.StateOrProvince = invalidStateOrPrvince;
         }
 
 
