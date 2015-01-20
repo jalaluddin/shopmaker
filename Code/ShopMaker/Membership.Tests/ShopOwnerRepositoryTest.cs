@@ -73,6 +73,50 @@ namespace ShopMaker.Membership.Tests
 
             // assert
             _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
+
+            // Remove method
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
+    .Returns(new SqlParameter("parameter", "parameter value"));
+
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Remove", It.IsAny<object[]>()))
+               .Returns(new SqlCommand("ShopOwnerAccount_Remove") { CommandType = System.Data.CommandType.StoredProcedure });
+
+            // act
+            membershipRepository.Remove(shopOwnerMock.Object.EmailAddress);
+
+            // assert
+            _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
+
+            // Get Method
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
+    .Returns(new SqlParameter("parameter", "parameter value"));
+
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Get", It.IsAny<object[]>()))
+              .Returns(new SqlCommand("ShopOwnerAccount_Get") { CommandType = System.Data.CommandType.StoredProcedure });
+
+            //act
+            membershipRepository.Get(shopOwnerMock.Object.EmailAddress);
+
+            //assert
+            // haven't understood how to do it......
+
+            // Edit Method
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
+    .Returns(new SqlParameter("parameter", "parameter value"));
+
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Edit", It.IsAny<object[]>()))
+              .Returns(new SqlCommand("ShopOwnerAccount_Edit") { CommandType = System.Data.CommandType.StoredProcedure });
+
+            _kernel.GetMock<IDbCommandExecutionService>().Setup(x => x.ExecuteCommand(
+                It.Is<DbCommand>(y => y.CommandType == System.Data.CommandType.StoredProcedure
+                    && y.CommandText == "ShopOwnerAccount_Edit"))).Verifiable();
+
+            //act
+            membershipRepository.Edit(shopOwnerMock.Object);
+
+            // assert
+            _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
+
         }
     }
 }
