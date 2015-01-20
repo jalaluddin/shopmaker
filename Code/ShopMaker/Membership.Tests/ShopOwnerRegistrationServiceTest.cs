@@ -19,7 +19,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Signup_EmptyEmailAddress_ThrowsException_()
+        public void Signup_EmptyEmailAddress_ThrowsException()
         {
             // prepare
             string invalidEmail = string.Empty;
@@ -32,7 +32,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Signup_NullEmailAddress_ThrowsException_()
+        public void Signup_NullEmailAddress_ThrowsException()
         {
             // prepare
             string invalidEmail = null;
@@ -45,7 +45,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Signup_InvalidEmailAddress_ThrowsException_()
+        public void Signup_InvalidEmailAddress_ThrowsException()
         {
             // prepare
             string invalidEmail = "email@hello";
@@ -58,7 +58,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void Signup_ShortPassword_ThrowsException_()
+        public void Signup_ShortPassword_ThrowsException()
         {
             // prepare
             string validEmail = "email@hello.com";
@@ -71,7 +71,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Signup_EmptyPassword_ThrowsException_()
+        public void Signup_EmptyPassword_ThrowsException()
         {
             // prepare
             string validEmail = "email@hello.com";
@@ -84,7 +84,7 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Signup_NullPassword_ThrowsException_()
+        public void Signup_NullPassword_ThrowsException()
         {
             // prepare
             string validEmail = "email@hello.com";
@@ -96,7 +96,7 @@ namespace ShopMaker.Membership.Tests
         }
 
         [TestMethod]
-        public void Signup_ValidEmailAndPassword_CallsRepositoryAddMethod_()
+        public void Signup_ValidEmailAndPassword_CallsRepositoryAddMethod()
         {
             // prepare
             string validEmail = "email@hello.com";
@@ -116,6 +116,76 @@ namespace ShopMaker.Membership.Tests
 
             // assert
             repositoryMock.VerifyAll();
+        }
+
+
+
+        // new unit test for method verify sigup Email Address 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))] // wrong exception type used
+        public void VerifySignupEmailAddress_EmptyVerificationCode_ThrowsException()
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string invalidVerificationCode = string.Empty;
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, invalidVerificationCode);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))] // wrong exception type used
+        public void VerifySignupEmailAddress_NullVerificationCode_ThrowsException() // name having ending underscore, why
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string invalidVerificationCode = null;
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, invalidVerificationCode);
+        }
+
+
+        [TestMethod]
+        public void VerifySignupEmailAddress_ValidVerificationCode() // name format violation
+        {
+            //prepare 
+            string validEmail = "email@hello.com";
+            string validVerificationCode = "123";
+
+            var repositoryMock = _kernel.GetMock<IMembershipRepository>();
+            repositoryMock.Setup(x => x.Add(It.Is<ShopOwner>(y => y.EmailAddress == validEmail // why are you mocking repository add method here? it is wrong
+                && y.VerificationCode == validVerificationCode))).Verifiable(); // compilation error in this line
+
+            _kernel.GetMock<IMembershipRepositoryFactory>().Setup(x => x.CreateMembershipRepository(UserTypeOptions.ShopOwner))
+                .Returns(repositoryMock.Object);
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+
+            // act
+            shopOwnerRegistrationService.VerifySignupEmailAddress(validEmail, validVerificationCode);
+
+            // assert
+            repositoryMock.VerifyAll();
+        }
+
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void IsEmailAddressAlreadyUsed_ThrowsException() // why the name is voilating convension
+        {
+            //prepare
+            string usedEmail = "email@hello.com";
+
+            IShopOwnerRegistrationService shopOwnerRegistrationService = _kernel.Get<IShopOwnerRegistrationService>();
+
+            // act
+            shopOwnerRegistrationService.IsEmailAddressAlreadyUsed(usedEmail); // no mocking is used, you need to check in database to confirm email already used or not
         }
     }
 }

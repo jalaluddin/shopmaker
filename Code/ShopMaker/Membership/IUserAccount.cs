@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ShopMaker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace ShopMaker.Membership
 {
-	public interface IUserAccount 
+	public interface IUserAccount : IEntity
 	{
 		string EmailAddress { get;set; }
 
@@ -30,7 +31,6 @@ namespace ShopMaker.Membership
 		AccountStatusOptions AccountStatus { get;set; }
 
 		bool MatchPassword(string plainPassword);
-
 	}
 }
 

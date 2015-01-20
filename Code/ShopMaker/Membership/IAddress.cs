@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ShopMaker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace ShopMaker.Membership
 {
-	public interface IAddress 
+	public interface IAddress : IEntity
 	{
 		string AddressLine1 { get;set; }
 

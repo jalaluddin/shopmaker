@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ShopMaker.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace ShopMaker.Membership
 {
-	public interface IMembershipPackage 
+	public interface IMembershipPackage : IEntity
 	{
 		string Name { get;set; }
 

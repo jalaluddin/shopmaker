@@ -44,10 +44,12 @@
     <Compile Include="Admin.cs" />
     <Compile Include="AdminRepository.cs" />
     <Compile Include="AuthenticationToken.cs" />
+    <Compile Include="FreeMembership.cs" />
     <Compile Include="IAddress.cs" />
     <Compile Include="IMembershipPackage.cs" />
     <Compile Include="IMembershipRepository.cs" />
     <Compile Include="IMembershipRepositoryFactory.cs" />
+    <Compile Include="IShopOwner.cs" />
     <Compile Include="IUserAccount.cs" />
     <Compile Include="MembershipRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
