@@ -78,6 +78,7 @@
     <Compile Include="ShopOwnerRepositoryTest.cs" />
     <Compile Include="ShopOwnerTest.cs" />
     <Compile Include="AdminRepositoryTest.cs" />
+    <Compile Include="AdminTest.cs" />
     <Compile Include="UserAuthenticationServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
