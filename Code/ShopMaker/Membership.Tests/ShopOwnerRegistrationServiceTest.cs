@@ -158,8 +158,6 @@ namespace ShopMaker.Membership.Tests
             string validVerificationCode = "123";
 
             var repositoryMock = _kernel.GetMock<IMembershipRepository>();
-            repositoryMock.Setup(x => x.Add(It.Is<ShopOwner>(y => y.EmailAddress == validEmail // why are you mocking repository add method here? it is wrong
-                && y.VerificationCode == validVerificationCode))).Verifiable(); // compilation error in this line
 
             _kernel.GetMock<IMembershipRepositoryFactory>().Setup(x => x.CreateMembershipRepository(UserTypeOptions.ShopOwner))
                 .Returns(repositoryMock.Object);
