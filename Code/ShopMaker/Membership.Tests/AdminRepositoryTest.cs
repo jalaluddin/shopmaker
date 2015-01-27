@@ -146,6 +146,7 @@ namespace ShopMaker.Membership.Tests
             
             
             
+
             // act
            var adminProfile =  membershipRepository.Get("email@yahoo.com");          
 
