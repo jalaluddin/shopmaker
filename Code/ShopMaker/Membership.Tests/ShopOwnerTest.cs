@@ -5,6 +5,7 @@ using Moq;
 using Ninject;
 using Ninject.MockingKernel;
 using Ninject.MockingKernel.Moq;
+using System.Text.RegularExpressions;
 
 namespace ShopMaker.Membership.Tests
 {
@@ -100,11 +101,21 @@ namespace ShopMaker.Membership.Tests
             shopOwnerAccount.EmailAddress = emptyEmail;
         }
 
+        [TestMethod]
         public void EmailAddress_InvalidFormatEmail_ThrowsException()
         {
+            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
+                           + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
+                           + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
+            string EmailAddress = shopOwnerAccount.EmailAddress;           
+
+            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            Assert.AreEqual(true, regex.IsMatch(EmailAddress));
+             
         }
 
+        [TestMethod]
         public void EmailAddress_EmailAlreadyExist_ThrowsException()
         {
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
@@ -132,8 +143,7 @@ namespace ShopMaker.Membership.Tests
             shopOwnerAccount.Password = emptyPassword;
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]        
         public void Password_TooShortPassword_ThrowsException()
         {
 
@@ -143,8 +153,7 @@ namespace ShopMaker.Membership.Tests
                 Assert.Fail();
         }
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
+        [TestMethod]        
         public void Password_TooLongPassword_ThrowsException()
         {
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
@@ -297,12 +306,7 @@ namespace ShopMaker.Membership.Tests
 
         #region TestForIDProperty
 
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void ID_SetNullValue_ThrowsException()
-        {
-            IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-        }
+        // I think no unit test is needed for this;
 
         #endregion
 
