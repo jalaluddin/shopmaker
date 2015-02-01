@@ -179,163 +179,163 @@ namespace ShopMaker.Membership.Tests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Zipcode_getEmptyZipcode_ThrowsException()
+        public void Zipcode_GetEmptyZipcode_ThrowsException()
         {
             // prepare
-            string invalidZipcode = string.Empty;
+            string invalidZipcode;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.Zipcode = invalidZipcode;
+           invalidZipcode = address.Zipcode;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Zipcode_getNullZipcode_ThrowsException()
+        public void Zipcode_GetNullZipcode_ThrowsException()
         {
             // prepare
-            string invalidZipcode = null;
+            string invalidZipcode;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.Zipcode = invalidZipcode;
+             invalidZipcode=  address.Zipcode  ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void StateOrPrvince_getNullStateOrPrvince_ThrowsException()
+        public void StateOrPrvince_GetNullStateOrPrvince_ThrowsException()
         {
             // prepare
-            string invalidStateOrPrvince = null;
+            string invalidStateOrPrvince;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.StateOrProvince = invalidStateOrPrvince;
-        }
-
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void StateOrPrvince_getEmptyStateOrPrvince_ThrowsException()
-        {
-            // prepare
-            string invalidStateOrPrvince = string.Empty;
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            address.StateOrProvince = invalidStateOrPrvince;
+          invalidStateOrPrvince=  address.StateOrProvince  ;
         }
 
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Country_getNullCountry_ThrowsException()
+        public void StateOrPrvince_GetEmptyStateOrPrvince_ThrowsException()
         {
             // prepare
-            string invalidCountry = null;
+            string invalidStateOrPrvince ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.Country = invalidCountry;
+           invalidStateOrPrvince= address.StateOrProvince ;
         }
 
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void Country_getEmptyCountry_ThrowsException()
+        public void Country_GetNullCountry_ThrowsException()
         {
             // prepare
-            string invalidCountry = String.Empty;
+            string invalidCountry ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.Country = invalidCountry;
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void City_getEmptyCity_ThrowsException()
-        {
-            // prepare
-            string invalidCity = String.Empty;
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            address.City = invalidCity;
+          invalidCountry = address.Country ;
         }
 
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void City_getNullCity_ThrowsException()
+        public void Country_GetEmptyCountry_ThrowsException()
+        {
+            // prepare
+            string invalidCountry;
+            IAddress address = _kernel.Get<IAddress>();
+
+            // act
+             invalidCountry= address.Country ;
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void City_GetEmptyCity_ThrowsException()
+        {
+            // prepare
+            string invalidCity ;
+            IAddress address = _kernel.Get<IAddress>();
+
+            // act
+           invalidCity=  address.City ;
+        }
+
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void City_GetNullCity_ThrowsException()
         {
             // prepare
             string invalidCity = null;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.City = invalidCity;
+           invalidCity= address.City  ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void AddressLine2_getNullAddressLine2_ThrowsException()
+        public void AddressLine2_GetNullAddressLine2_ThrowsException()
         {
             // prepare
-            string invalidAddressLine2 = null;
+            string invalidAddressLine2 ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.AddressLine2 = invalidAddressLine2;
+          invalidAddressLine2=  address.AddressLine2  ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void AddressLine2_getEmptyAddressLine2_ThrowsException()
+        public void AddressLine2_GetEmptyAddressLine2_ThrowsException()
         {
             // prepare
-            string invalidAddressLine2 = String.Empty;
+            string invalidAddressLine2 ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.AddressLine2 = invalidAddressLine2;
+            invalidAddressLine2= address.AddressLine2 ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void AddressLine1_getNullAddressLine1_ThrowsException()
+        public void AddressLine1_GetNullAddressLine1_ThrowsException()
         {
             // prepare
             string invalidAddressLine1 = null;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.AddressLine1 = invalidAddressLine1;
+             invalidAddressLine1=address.AddressLine1 ;
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void AddressLine1_getEmptyAddressLine1_ThrowsException()
+        public void AddressLine1_GetEmptyAddressLine1_ThrowsException()
         {
             // prepare
-            string invalidAddressLine1 = String.Empty;
+            string invalidAddressLine1 ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.AddressLine1 = invalidAddressLine1;
+         invalidAddressLine1=   address.AddressLine1  ;
         }
 
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void ID_getEmptyID_ThrowsException()
+        public void ID_GetEmptyID_ThrowsException()
         {
             // prepare
-            Guid invalidID = Guid.Empty;
+            Guid invalidID ;
             IAddress address = _kernel.Get<IAddress>();
 
             // act
-            address.ID = invalidID;
+           invalidID=  address.ID ;
         }
 
         
