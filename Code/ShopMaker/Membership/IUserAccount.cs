@@ -10,7 +10,9 @@ namespace ShopMaker.Membership
 	{
 		string EmailAddress { get;set; }
 
-		string Password { get;set; }
+		string Password { set; }
+
+        string EncryptedPassword { get; }
 
 		string FirstName { get;set; }
 

@@ -31,7 +31,7 @@ namespace ShopMaker.Membership
                 _dbCommandFactory.CreateParameter("LastName", user.LastName),
                 _dbCommandFactory.CreateParameter("LastWrongPasswordAttemptDateTime", user.LastWrongPasswordAttemptDateTime),
                 _dbCommandFactory.CreateParameter("MobileNumber", user.MobileNumber),
-                _dbCommandFactory.CreateParameter("Password", user.Password),
+                _dbCommandFactory.CreateParameter("Password", user.EncryptedPassword),
                 _dbCommandFactory.CreateParameter("WrongPasswordAttempt", user.WrongPasswordAttempt),
                 _dbCommandFactory.CreateParameter("ID", user.ID));
 
@@ -58,7 +58,7 @@ namespace ShopMaker.Membership
                 _dbCommandFactory.CreateParameter("LastName", user.LastName),
                 _dbCommandFactory.CreateParameter("LastWrongPasswordAttemptDateTime", user.LastWrongPasswordAttemptDateTime),
                 _dbCommandFactory.CreateParameter("MobileNumber", user.MobileNumber),
-                _dbCommandFactory.CreateParameter("Password", user.Password),
+                _dbCommandFactory.CreateParameter("Password", user.EncryptedPassword),
                 _dbCommandFactory.CreateParameter("WrongPasswordAttempt", user.WrongPasswordAttempt),
                 _dbCommandFactory.CreateParameter("ID", user.ID));
 

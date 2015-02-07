@@ -104,7 +104,7 @@ namespace ShopMaker.Membership.Tests
 
             var repositoryMock = _kernel.GetMock<IMembershipRepository>();
             repositoryMock.Setup(x => x.Add(It.Is<ShopOwner>(y => y.EmailAddress == validEmail
-                && y.Password == validPassword))).Verifiable();
+                && !String.IsNullOrWhiteSpace(y.EncryptedPassword)))).Verifiable();
 
             _kernel.GetMock<IMembershipRepositoryFactory>().Setup(x => x.CreateMembershipRepository(UserTypeOptions.ShopOwner))
                 .Returns(repositoryMock.Object);

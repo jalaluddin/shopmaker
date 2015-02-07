@@ -55,7 +55,7 @@ namespace ShopMaker.Membership.Tests
             shopOwnerMock.SetupProperty(x => x.LastWrongPasswordAttemptDateTime, DateTime.Now.AddDays(-2));
             shopOwnerMock.SetupProperty(x => x.MembershipPlan, membershipMock.Object);
             shopOwnerMock.SetupProperty(x => x.MobileNumber, "8801737364773");
-            shopOwnerMock.SetupProperty(x => x.Password, "testpass123");
+            shopOwnerMock.SetupProperty(x => x.EncryptedPassword, "testpass123");
             shopOwnerMock.SetupProperty(x => x.WrongPasswordAttempt, 0);
 
             _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))

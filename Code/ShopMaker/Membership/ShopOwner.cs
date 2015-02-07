@@ -22,10 +22,6 @@ namespace ShopMaker.Membership
 
         public string Password
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
             set
             {
                 throw new NotImplementedException();
@@ -179,6 +175,11 @@ namespace ShopMaker.Membership
         public bool MatchPassword(string plainPassword)
         {
             throw new NotImplementedException();
+        }
+
+        public string EncryptedPassword
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

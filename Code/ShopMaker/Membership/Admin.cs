@@ -19,10 +19,13 @@ namespace ShopMaker.Membership
             set;
         }
 
+        private string _password;
         public string Password
         {
-            get;
-            set;
+            set
+            {
+                _password = value;
+            }
         }
 
         public string FirstName
@@ -96,6 +99,11 @@ namespace ShopMaker.Membership
         {
             get;
             set;
+        }
+
+        public string EncryptedPassword
+        {
+            get { throw new NotImplementedException(); }
         }
     }
 }

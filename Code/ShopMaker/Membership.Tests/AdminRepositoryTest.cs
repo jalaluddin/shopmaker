@@ -37,7 +37,7 @@ namespace ShopMaker.Membership.Tests
             adminMock.SetupProperty(x => x.LastName, "Uddin");
             adminMock.SetupProperty(x => x.LastWrongPasswordAttemptDateTime, DateTime.Now.AddDays(-2));            
             adminMock.SetupProperty(x => x.MobileNumber, "8801737364773");
-            adminMock.SetupProperty(x => x.Password, "testpass123");
+            adminMock.SetupProperty(x => x.EncryptedPassword, "testpass123");
             adminMock.SetupProperty(x => x.WrongPasswordAttempt, 0);
 
 
@@ -103,7 +103,7 @@ namespace ShopMaker.Membership.Tests
             adminMock2.SetupProperty(x => x.LastName, "Uddin");
             adminMock2.SetupProperty(x => x.LastWrongPasswordAttemptDateTime, DateTime.Now.AddDays(-2));
             adminMock2.SetupProperty(x => x.MobileNumber, "8801737364773");
-            adminMock2.SetupProperty(x => x.Password, "testpass123");
+            adminMock2.SetupProperty(x => x.EncryptedPassword, "testpass123");
             adminMock2.SetupProperty(x => x.WrongPasswordAttempt, 0);
 
 

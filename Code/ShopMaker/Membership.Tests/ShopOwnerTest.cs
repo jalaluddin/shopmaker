@@ -17,8 +17,6 @@ namespace ShopMaker.Membership.Tests
             _kernel.Bind<IUserAccount>().To<ShopOwner>();
         }
 
-
-
         #region Test_For_MatchPassword_Method
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
@@ -143,26 +141,6 @@ namespace ShopMaker.Membership.Tests
             shopOwnerAccount.Password = emptyPassword;
         }
 
-        [TestMethod]        
-        public void Password_TooShortPassword_ThrowsException()
-        {
-
-            IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-            int PasswordLeghth = shopOwnerAccount.Password.Length;
-            if (PasswordLeghth < 6)
-                Assert.Fail();
-        }
-
-        [TestMethod]        
-        public void Password_TooLongPassword_ThrowsException()
-        {
-            IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-            int PasswordLeghth = shopOwnerAccount.Password.Length;
-            if (PasswordLeghth > 20)
-                Assert.Fail();
-        }
-
-        
         #endregion
 
         #region TestForFirstNameProperty

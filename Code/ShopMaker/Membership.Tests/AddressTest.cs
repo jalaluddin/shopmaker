@@ -177,172 +177,73 @@ namespace ShopMaker.Membership.Tests
         }
 
         [TestMethod]
-        public void Zipcode_GetZipcode_ReturnsNotNullZipcode()
+        public void Zipcode_GetZipcode_ReturnsZipcode()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string zipcode = address.Zipcode;
-
-            // assert
-            Assert.IsNotNull(zipcode);
         }
 
         [TestMethod]
-        public void Zipcode_GetZipcode_ReturnsNonEmptyZipcode()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string zipcode = address.Zipcode;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, zipcode);
-        }
-
-        [TestMethod]
-        public void StateOrProvince_GetStateOrProvince_ReturnsNotNullStateOrProvince()
+        public void StateOrProvince_GetStateOrProvince_ReturnsStateOrProvince()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string stateOrPrvince = address.StateOrProvince;
-
-            // assert
-            Assert.IsNotNull(stateOrPrvince);
         }
 
         [TestMethod]
-        public void StateOrProvince_GetStateOrProvince_ReturnsNonEmptyStateOrProvince()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string stateOrProvince = address.StateOrProvince;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, stateOrProvince);
-        }
-
-        [TestMethod]
-        public void Country_GetCountry_ReturnsNotNullCountry()
+        public void Country_GetCountry_ReturnsCountry()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string country = address.Country;
-
-            // assert
-            Assert.IsNotNull(country);
         }
 
         [TestMethod]
-        public void Country_GetCountry_ReturnsNonEmptyCountry()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string country = address.Country;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, country);
-        }
-
-        [TestMethod]
-        public void City_GetCity_ReturnsNotNullCity()
+        public void City_GetCity_ReturnsCity()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string city = address.City;
-
-            // assert
-            Assert.IsNotNull(city);
         }
 
         [TestMethod]
-        public void City_GetCity_ReturnsNonEmptyCity()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string city = address.City;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, city);
-        }
-
-        [TestMethod]
-        public void AddressLine2_GetAddressLine2_ReturnsNotNullAddressLine2()
+        public void AddressLine2_GetAddressLine2_ReturnsAddressLine2()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string addressLine2 = address.AddressLine2;
-
-            // assert
-            Assert.IsNotNull(addressLine2);
         }
 
         [TestMethod]
-        public void AddressLine2_GetAddressLine2_ReturnsNonEmptyAddressLine2()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string addressLine2 = address.AddressLine2;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, addressLine2);
-        }
-
-        [TestMethod]
-        public void AddressLine1_GetAddressLine1_ReturnsNotNullAddressLine1()
+        public void AddressLine1_GetAddressLine1_ReturnsAddressLine1()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             string addressLine1 = address.AddressLine1;
-
-            // assert
-            Assert.IsNotNull(addressLine1);
         }
 
         [TestMethod]
-        public void AddressLine1_GetAddressLine1_ReturnsNonEmptyAddressLine1()
-        {
-            // prepare
-            IAddress address = _kernel.Get<IAddress>();
-
-            // act
-            string addressLine1 = address.AddressLine1;
-
-            // assert
-            Assert.AreNotEqual(string.Empty, addressLine1);
-        }
-
-        [TestMethod]
-        public void ID_GetID_ReturnsNonEmptyID()
+        public void ID_GetID_ReturnsID()
         {
             // prepare
             IAddress address = _kernel.Get<IAddress>();
 
             // act
             Guid id = address.ID;
-
-            // assert
-            Assert.AreNotEqual(Guid.Empty, id);
         }
     }
 }
