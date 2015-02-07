@@ -17,7 +17,8 @@ namespace ShopMaker.Membership.Tests
             _kernel.Bind<IUserAccount>().To<ShopOwner>();
         }
 
-        #region Test_For_MatchPassword_Method
+        #region Test For MatchPassword Method
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void MatchPassword_NullPassword_ThrowsException()
@@ -44,49 +45,46 @@ namespace ShopMaker.Membership.Tests
         }
 
         [TestMethod]
-        public void MatchPassword_PlainPassword_ValidationResult()
+        public void MatchPassword_WrongPassword_ResultFalse()
         {
             // prepare
-            string PlainPassword = " ";
+            string PlainPassword = "133578";
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-            bool IsValid = shopOwnerAccount.MatchPassword(PlainPassword);
-            Assert.Equals(true, IsValid);
+            shopOwnerAccount.Password = "123456";
             // act
+            bool isCorrect = shopOwnerAccount.MatchPassword(PlainPassword);
 
-        } 
-        #endregion
-
-        #region Test_For_ChangeMembershipPlan_Method
-        [TestMethod]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void ChangeMembershipPlan_NullNewPlan_ThrowsException()
-        {
-            // prepare
-
-            IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-
-
-            // act
+            // assert
+            Assert.Equals(false, isCorrect);
         }
 
-        public void ChangeMembershipPlan_NewPlan_CurrentPlanAsNewPlan()
+        [TestMethod]
+        public void MatchPassword_CorrectPassword_ResultTrue()
         {
             // prepare
-
+            string PlainPassword = "133578";
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-
-
+            shopOwnerAccount.Password = "133578";
             // act
+            bool isCorrect = shopOwnerAccount.MatchPassword(PlainPassword);
+
+            // assert
+            Assert.Equals(true, isCorrect);
         } 
+
         #endregion
-        
-        #region TestForEmailAddressProperty
+
+        #region Test For EmailAddress Property
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void EmailAddress_NullEmail_ThrowsException()
         {
+            // preapre
             string nullEmail = null;
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
+
+            // act
             shopOwnerAccount.EmailAddress = nullEmail;
         }
 
@@ -94,31 +92,38 @@ namespace ShopMaker.Membership.Tests
         [ExpectedException(typeof(ArgumentNullException))]
         public void EmailAddress_EmptyEmail_ThrowsException()
         {
+            // prepare
             string emptyEmail = string.Empty;
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
+
+            // act
             shopOwnerAccount.EmailAddress = emptyEmail;
         }
 
         [TestMethod]
-        public void EmailAddress_InvalidFormatEmail_ThrowsException()
+        [ExpectedException(typeof(ArgumentException))]
+        public void EmailAddress_AtTheRateMissingInEmailFormat_ThrowsException()
         {
-            string pattern = @"^(?!\.)(""([^""\r\\]|\\[""\r\\])*""|"
-                           + @"([-a-z0-9!#$%&'*+/=?^_`{|}~]|(?<!\.)\.)*)(?<!\.)"
-                           + @"@[a-z0-9][\w\.-]*[a-z0-9]\.[a-z][a-z\.]*[a-z]$";
+            // prepare
+            string invlaidEmail = "test.com";
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
-            string EmailAddress = shopOwnerAccount.EmailAddress;           
 
-            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            Assert.AreEqual(true, regex.IsMatch(EmailAddress));
-             
+            // act
+            shopOwnerAccount.EmailAddress = invlaidEmail;           
         }
 
         [TestMethod]
-        public void EmailAddress_EmailAlreadyExist_ThrowsException()
+        [ExpectedException(typeof(ArgumentException))]
+        public void EmailAddress_DomainExtensionMissingInEmailFormat_ThrowsException()
         {
+            // prepare
+            string invlaidEmail = "test@test";
             IUserAccount shopOwnerAccount = _kernel.Get<IUserAccount>();
+
+            // act
+            shopOwnerAccount.EmailAddress = invlaidEmail;
         }
-        
+
         #endregion
 
         #region TestForPasswordProperty
