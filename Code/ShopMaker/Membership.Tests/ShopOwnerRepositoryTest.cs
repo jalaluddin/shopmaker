@@ -73,50 +73,64 @@ namespace ShopMaker.Membership.Tests
 
             // assert
             _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
+        }
 
-            // Remove method
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
-    .Returns(new SqlParameter("parameter", "parameter value"));
-
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Remove", It.IsAny<object[]>()))
-               .Returns(new SqlCommand("ShopOwnerAccount_Remove") { CommandType = System.Data.CommandType.StoredProcedure });
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Remove_NullEmail_ThrowsException()
+        {
+            // preapre
+            IMembershipRepository membershipRepository = _kernel.Get<IMembershipRepository>();
+            string nullEmail = null;
 
             // act
-            membershipRepository.Remove(shopOwnerMock.Object.EmailAddress);
+            membershipRepository.Remove(nullEmail);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Remove_EmptyEmail_ThrowsException()
+        {
+            // preapre
+            IMembershipRepository membershipRepository = _kernel.Get<IMembershipRepository>();
+            string emptyEmail = string.Empty;
+
+            // act
+            membershipRepository.Remove(emptyEmail);
+        }
+
+        [TestMethod]
+        public void Remove_ValidEmail_CallsDbCommandExecutionServiceWithProperEmailArgument()
+        {
+            // preapre
+            string commandText = "ShopOwnerAccount_Remove";
+
+            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand(commandText,
+                It.IsAny<Object[]>())).Returns(new SqlCommand(commandText, null));
+
+            _kernel.GetMock<IDbCommandExecutionService>()
+                .Setup(x => x.ExecuteCommand(It.Is<DbCommand>(y => y.CommandText == commandText))).Verifiable();
+
+            IMembershipRepository membershipRepository = _kernel.Get<IMembershipRepository>();
+            string validEmail = "info@devskill.com";
+
+            // act
+            membershipRepository.Remove(validEmail);
 
             // assert
             _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
+        }
 
-            // Get Method
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
-    .Returns(new SqlParameter("parameter", "parameter value"));
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Edit_NullUserAccount_ThrowsException()
+        {
+            // preapre
+            IMembershipRepository membershipRepository = _kernel.Get<IMembershipRepository>();
+            IUserAccount userAccount = null;
 
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Get", It.IsAny<object[]>()))
-              .Returns(new SqlCommand("ShopOwnerAccount_Get") { CommandType = System.Data.CommandType.StoredProcedure });
-
-            //act
-            membershipRepository.Get(shopOwnerMock.Object.EmailAddress);
-
-            //assert
-            // haven't understood how to do it......
-
-            // Edit Method
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateParameter(It.IsAny<string>(), It.IsAny<object>()))
-    .Returns(new SqlParameter("parameter", "parameter value"));
-
-            _kernel.GetMock<IDbCommandFactory>().Setup(x => x.CreateCommand("ShopOwnerAccount_Edit", It.IsAny<object[]>()))
-              .Returns(new SqlCommand("ShopOwnerAccount_Edit") { CommandType = System.Data.CommandType.StoredProcedure });
-
-            _kernel.GetMock<IDbCommandExecutionService>().Setup(x => x.ExecuteCommand(
-                It.Is<DbCommand>(y => y.CommandType == System.Data.CommandType.StoredProcedure
-                    && y.CommandText == "ShopOwnerAccount_Edit"))).Verifiable();
-
-            //act
-            membershipRepository.Edit(shopOwnerMock.Object);
-
-            // assert
-            _kernel.GetMock<IDbCommandExecutionService>().VerifyAll();
-
+            // act
+            membershipRepository.Edit(userAccount);
         }
     }
 }
