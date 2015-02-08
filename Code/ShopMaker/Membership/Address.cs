@@ -9,87 +9,133 @@ namespace ShopMaker.Membership
 {
     public class Address : IEntity, IAddress
     {
+        private Guid _id;
         public Guid ID
         {
             get
             {
-                throw new NotImplementedException();
+                return _id;
             }
             set
             {
-                throw new NotImplementedException();
+                _id = value;
+
+                if (_id == Guid.Empty)
+                {
+                    throw new ArgumentNullException("ID  is Empty.");
+                }
+            
             }
         }
 
+
+        private string _addressline1;
         public string AddressLine1
         {
             get
             {
-                throw new NotImplementedException();
+                return _addressline1;
             }
             set
             {
-                throw new NotImplementedException();
+                _addressline1 = value;
+                if (String.IsNullOrEmpty(_addressline1))
+                {
+                    throw new ArgumentNullException("AddressLine1  is NullorEmpty.");
+                }
+            
             }
         }
 
+
+        private string _addressline2;
         public string AddressLine2
         {
             get
             {
-                throw new NotImplementedException();
+                return _addressline2; 
             }
             set
             {
-                throw new NotImplementedException();
+                _addressline2 = value;
+               
+                if (String.IsNullOrEmpty(_addressline2))
+                {
+                    throw new ArgumentNullException("AddressLine2  is NullorEmpty.");
+                }
+            
             }
         }
 
+        private string _city;
         public string City
         {
             get
             {
-                throw new NotImplementedException();
+                return _city;
             }
             set
             {
-                throw new NotImplementedException();
+                _city = value;
+                if (String.IsNullOrEmpty(_city))
+                {
+                    throw new ArgumentNullException("City  is NullorEmpty.");
+                }
+            
             }
         }
 
+        private string _country;
         public string Country
         {
             get
             {
-                throw new NotImplementedException();
+                return _country;
             }
             set
             {
-                throw new NotImplementedException();
+                _country = value;
+                if (String.IsNullOrEmpty(_country))
+                {
+                    throw new ArgumentNullException("country  is NullorEmpty.");
+                }
             }
         }
 
+
+        private string _stateofprovince;
         public string StateOrProvince
         {
             get
             {
-                throw new NotImplementedException();
+                return _stateofprovince;
             }
             set
             {
-                throw new NotImplementedException();
+                _stateofprovince = value;
+                if (String.IsNullOrEmpty(_stateofprovince))
+                {
+                    throw new ArgumentNullException("StateOrProvince  is NullorEmpty.");
+                }
+            
             }
         }
 
+        private string _zipcode;
         public string Zipcode
         {
             get
             {
-                throw new NotImplementedException();
+                return _zipcode;
             }
             set
             {
-                throw new NotImplementedException();
+                _zipcode = value;
+
+                if (String.IsNullOrEmpty(_zipcode))
+                {
+                    throw new ArgumentNullException("Zipcode  is NullorEmpty.");
+                }
             }
         }
     }
