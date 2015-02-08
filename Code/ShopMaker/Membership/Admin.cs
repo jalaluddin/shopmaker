@@ -22,22 +22,76 @@ namespace ShopMaker.Membership
         private string _password;
         public string Password
         {
+            get { return this._password; }
             set
             {
-                _password = value;
+                this._password = value;
+
+                if (this._password == string.Empty)
+                {
+                    throw new ArgumentException("Empty  Field!");
+                }
+                else if (this._password == null)
+                {
+                    throw new ArgumentException("Null  Field!");
+                }
+                   else if (this._password.Length <= 5)
+                   {
+                       throw new ArgumentException("Too short Password field");
+                   }
+                   Console.WriteLine("Valid Password");
             }
         }
-
+        private string _firstname;
         public string FirstName
         {
-            get;
-            set;
+            get
+            {
+                return this._firstname;
+            }
+            set
+               {
+                   this._firstname = value;
+                  
+                   
+                   if (this._firstname == string.Empty)
+                   {
+                       throw new ArgumentException("Empty  Field!");
+                   }
+                   else if (this._firstname == null)
+                   {
+                       throw new ArgumentException("Null  Field!");
+                   }
+                   else if (this._firstname.Length <= 2)
+                   {
+                       throw new ArgumentException("Too short Name field");
+                   }
+                   Console.WriteLine("Valid Name");
+                   
+               }
         }
-
+        private string _lastname;
         public string LastName
         {
-            get;
-            set;
+            get { return this._lastname; }
+            set
+            {
+                this._lastname = value;
+
+                if (this._lastname == string.Empty)
+                {
+                    throw new ArgumentException("Empty  Field!");
+                }
+                else if (this._lastname == null)
+                {
+                    throw new ArgumentException("Null  Field!");
+                }
+                else if (this._lastname.Length <= 2)
+                {
+                    throw new ArgumentException("Too short Name field");
+                }
+                Console.WriteLine("Valid Name");
+            }
         }
 
         public DateTime LastLoginDateTime
@@ -51,11 +105,28 @@ namespace ShopMaker.Membership
                 throw new NotImplementedException();
             }
         }
-
+        private string _mobilenumber;
         public string MobileNumber
         {
-            get;
-            set;
+            get { return this._mobilenumber; }
+            set
+            {
+                this._mobilenumber = value;
+
+                if (this._mobilenumber == string.Empty)
+                {
+                    throw new ArgumentException("Empty  Field!");
+                }
+                else if (this._mobilenumber == null)
+                {
+                    throw new ArgumentException("Null  Field!");
+                }
+                else if (this._mobilenumber.Length <= 10)
+                {
+                    throw new ArgumentException("Invalid Mobile Number");
+                }
+                Console.WriteLine("Valid Mobile Number");
+            }
         }
 
         public int WrongPasswordAttempt
