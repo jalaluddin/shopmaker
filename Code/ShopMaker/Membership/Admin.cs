@@ -26,7 +26,7 @@ namespace ShopMaker.Membership
             set
             {
                 this._password = value;
-
+//hello
                 if (this._password == string.Empty)
                 {
                     throw new ArgumentException("Empty  Field!");
