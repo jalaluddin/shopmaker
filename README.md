@@ -1,2 +1,2 @@
 # shopmaker
-An E-Commerce platform for everybody
+An E-Commerce platform for everybody.
